@@ -1,0 +1,272 @@
+<div class="container bg-light" id="divForm">
+   
+   <h1>na "TEORIA", vai trazer o nome da escola aqui</h1><br>
+   <h2 class="text-center">Formulário para escrição de matrícula.</h2><br>
+   
+    <form>
+        <div class="form-group">
+            <h3>Dados do(a) estudante</h3>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="nomeEstud">Nome Completo do(a) estudante</label>
+            <input type="text" class="form-control" id="nomeEstud" name="nomeEstud" placeholder="">
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="dataNasc">Data de nascimento</label>
+                <input type="date" class="form-control" id="dataNasc" name="dataNasc" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="cpfAluno">CPF do(a) estudante</label>
+                <input type="number" class="form-control" id="cpfEstud" name="cpfEstud" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="sexo">Sexo</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="sexo" value="M"> Masculino
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="sexo" value="F"> Feminino
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="rgEstud">Número do RG do(a) estudante</label>
+                <input type="number" class="form-control" id="rgEstud" name="rgEstud" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="orgExpAluno">Órgão de Expedição</label>
+                <input type="text" class="form-control" id="orgExpEstud" name="orgExpEstud" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="deficiencia">Possui Algum tipo de deficiência?</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="deficienciaSim" name="deficiencia" value="sim" onchange="radioDeficiencia()"> Sim
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="deficienciaNao" name="deficiencia" value="nao" onchange="radioDeficiencia()"> Não
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inicio callapse deficiencia -->
+
+        <div id="collapseDeficiencia" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label class="form-control-label" for="TipoDeficiencia">Tipo da deficiência</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="TipoDeficiencia" value="Física"> Física
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="TipoDeficiencia" value="Auditiva"> Auditiva
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="TipoDeficiencia" value="Visual"> Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="TipoDeficiencia" value="Mental"> Mental
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-8">
+                    <label class="form-control-label" for="detalDeficiencia">Detalhes da Deficiência</label>
+                    <textarea type="textarea" class="form-control" id="detalDeficiencia" name="detalDeficiencia" placeholder="" style="height: 108px; resize: none;"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fim callapse deficiencia -->
+
+        <div class="form-group">
+            <label class="form-control-label" for="nomeMae">Nome da Mãe</label>
+            <input type="text" class="form-control" id="nomeMae" name="nomeMae" placeholder="">
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="nomePai">Nome do Pai</label>
+            <input type="text" class="form-control" id="nomePai" name="nomePai" placeholder="">
+        </div>
+        <div class="form-group">
+            <h3>Dados do Responsável</h3>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="nomeResp">Nome Completo do Responsável</label>
+            <input type="text" class="form-control" id="nomeResp" name="nomeResp" placeholder="">
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="rgResp">Número do RG do Responsável</label>
+                <input type="number" class="form-control" id="rgResp" name="rgResp" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="orgExpResp">Órgão de Expedição</label>
+                <input type="text" class="form-control" id="orgExpResp" name="orgExpResp" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="cpfResp">CPF do Responsável</label>
+                <input type="number" class="form-control" id="cpfResp" name="cpfResp" placeholder="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="form-control-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="tele1">Telefone</label>
+                <input type="number" class="form-control" id="tele1" name="tele1" placeholder="">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="tele2">Celular</label>
+                <input type="number" class="form-control" id="tele2" name="tele2" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <h3>Endereço</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="cep" class="col-form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" name="cep">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="estado" class="col-form-label">Estado</label>
+                <input type="text" class="form-control" id="estado" name="endereco" placeholder="" readonly>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="cidade" class="col-form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="endereco" placeholder="" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="endereco" class="col-form-label">Endereço</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="complemento" class="col-form-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento" name="complemento" placeholder="">
+        </div>
+        <div class="form-group">
+            <h3>Upload dos documentos necessários</h3>
+        </div>
+
+        <div class="form-group">
+            <h5>Etapa / Modalidade</h5>
+        </div>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input collapsed" type="radio" name="modalidade" id="eduInfant" value="Educação Infantil" onChange="radioCollapse()" required> Educação Infantil
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="modalidade" id="ensFundam" value="Ensino Fundamental" onChange="radioCollapse()" required> Ensino Fundamental
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="modalidade" id="ensMedio" value="Ensino Médio" onChange="radioCollapse()" required> Ensino Médio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="modalidade" id="eduEspec" value="Educação Especial" onChange="radioCollapse()" required> Educação Especial
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <ul class="list-group col-8">
+
+            <!--Collapse documentos todos-->
+            <div id="collapsetodos" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <li class="list-group-item active">Documentos à serem enviados</li>
+                <li class="list-group-item">Foto 3x4.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie uma foto, no formato 3x4, do(a) estudante.">Info</span></li>
+                <li class="list-group-item">Certidão de Nascimento.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a certidão de nascimento do(a) estudante.">Info</span></li>
+                <li class="list-group-item">Comprovante de tipagem sanguínea e fator RH.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie ocomprovante de tipagem sanguínea do(a) estudante.">Info</span></li>
+                <li class="list-group-item">Comprovante de Residência.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie um comprovante de residência válido. Ex: (Conta de luz, conta de água, contrato de aluguel com firma reconhecida em cartório, etc.)">Info</span></li>
+                <li class="list-group-item">RG do responsável.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o RG (Registro Geral) do responsável.">Info</span></li>
+                <li class="list-group-item">CPF do responsável.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o CPF (Cadastro de pessoa física) do responsável.">Info</span></li>
+            </div>
+            <!---->
+
+            <!--Collapse Educacao infantil-->
+            <div id="collapseEduInfant" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <li class="list-group-item">Cartão de Vacina atualizado.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie cartão de vacina atualizado do(a) estudante.">Info</span></li>
+            </div>
+            <!---->
+
+            <!--Collapse Ensino Fundamental-->
+            <div id="collapseEnsFund" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <li class="list-group-item">DEPROV ou Histórico Escolar.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a Declaração Provisória de Matrícula (DEPROV) ou Histórico Escolar.">Info</span></li>
+                <li class="list-group-item">RAv – Anos Iniciais ou ou Ficha Individual – Anos Finais.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o Registro de Avaliação (RAv) – Anos Iniciais do(a) estudante, no caso de a matrícula ser efetivada no decorrer do ano letivo, ou Ficha Individual do(a) Estudante – Anos Finais.">Info</span></li>
+            </div>
+            <!---->
+
+            <!--Collapse Ensino Medio-->
+            <div id="collapseEnsMedio" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                <li class="list-group-item">DEPROV ou Histórico Escolar.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a Declaração Provisória de Matrícula (DEPROV) ou Histórico Escolar.">Info</span></li>
+                <li class="list-group-item">Ficha Individual.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a Ficha Individual do(a) Estudante, no caso de a matrícula ser efetivada no decorrer do ano letivo.">Info</span></li>
+            </div>
+            <!---->
+
+            <!--Collapse Edu Especial-->
+            <div id="collapseEduEsp" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                <li class="list-group-item">DEPROV ou Histórico Escolar.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a Declaração Provisória de Matrícula (DEPROV) ou Histórico Escolar.">Info</span></li>
+                <li class="list-group-item">Registro de Avaliação Bimestral – Anos Iniciais ou ou Ficha Individual – Anos Finais.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o Registro de Avaliação Bimestral – Anos Iniciais do(a) estudante, no caso de a matrícula ser efetivada no decorrer do ano letivo, ou Ficha Individual do(a) Estudante – Anos Finais.">Info</span></li>
+                <li class="list-group-item">Documentação de cada Etapa / Modalidade da Educação.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie a documentação pertinente a cada Etapa/Modalidade da Educação do(a) estudante.">Info</span></li>
+                <li class="list-group-item">Diagnóstico clínico.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o diagnóstico clínico, expedido por profissional habilitado, identificando AH/SD, a Deficiência e/ou TGD/TEA do(a) estudante.">Info</span></li>
+                <li class="list-group-item">Relatório de Avaliação e Intervenção Educacional.<span class="badge badge-pill badge-dark pull-right btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Selecione e envie o Relatório de Avaliação e Intervenção Educacional, adequação curricular, plano de AEE ou Plano Pedagógico Individual (PPI) caso possua.">Info</span></li>
+            </div>
+            <!---->
+
+        </ul>
+
+        <!--inicio--> <br>
+
+        <div class="form-group">
+            <p><strong>Todos os documentos solicitados devem ser enviados nas extenções ('jpg', 'jpeg', 'png' ou 'pdf') e todos os documentos juntos não podem passar de 10MB.</strong></p>
+            <input id="campoFiles" class="file" type="file" multiple data-preview-file-type="any" data-upload-url="#">
+        </div>
+
+        <!--fim-->
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Submeter Formulário">
+        </div>
+    </form>
+</div>
+<script src="../js/lib/pt-BR.js"></script>
+<script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    
+    $("#campoFiles").fileinput({
+        language: 'pt-BR',
+        uploadUrl: '#', // you must set a valid URL here else you will get an error
+        allowedFileExtensions: ['jpg', 'png', 'jpeg', 'pdf'],
+        overwriteInitial: false,
+        maxFileSize: 10000,
+        maxFilesNum: 11,
+        slugCallback: function (filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+    });    
+    </script>
