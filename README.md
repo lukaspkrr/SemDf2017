@@ -1,2 +1,2 @@
-# SEMDF-AngularJs-1.6
+# SemDf2017
 Sistema Escolar de Matricula do DF
