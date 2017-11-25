@@ -1,0 +1,133 @@
+<div class="container">
+    <h1>Mátricula</h1>
+    <h5>Selecione ....</h5>
+    <br>
+    <form action="">
+        <div class="row">
+
+            <div class="form-group col-md-3">
+
+                <h3 class="mr-sm-2" for="inlineFormCustomSelect">Cidade:</h3>
+                <select ng-model="map.cidade" ng-change="cidadeChange(cidade)" ng-options="cidade.nome for cidade in cidades" class="custom-select" id="inlineFormCustomSelect">
+                            <option value="">Selecionar</option>
+
+                          </select>
+            </div>
+
+            <div class="form-group col-md-4">
+                <h3 class="mr-sm-2" for="inlineFormCustomSelect">Nivel escolar:</h3>
+                <select class="custom-select" id="inlineFormCustomSelect">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+            </div>
+
+            <div class="form-group col-md-4 ">
+                <h3 class="mr-sm-2" for="inlineFormCustomSelect">Escolas:</h3>
+                <select class="custom-select" id="inlineFormCustomSelect">
+                            <option selected>CF 01</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+            </div>
+
+        </div>
+    </form>
+
+
+
+    <div class="row">
+
+
+        <div style="height: 400px;" class=" col-md-7">
+            <div id="map">
+
+            </div>
+
+           
+
+            <script src="../js/services/api-google.js"></script>
+
+
+        </div>
+
+        <div class="row justify-content-md-center">
+
+
+            <div class="card border-dark mb-3">
+                <div class="card-header">Imformações sobre a escola:&nbsp;&nbsp;</div>
+                <div class="card-body text-dark">
+
+                    <h6>Endereço: Asa Sul 304</h6>
+
+                    <br>
+
+                    <h6>Telefones: (61)3243-3213</h6>
+                    <h6>Telefones: (61)3243-3213</h6>
+                </div>
+            </div>
+
+            <div class="col-6 ">
+                <a type="button" href="/formulario/1" class="btn btn-success">Matricular</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <br>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Avaliações</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            <br>
+            <div class="card border-dark mb-3">
+                <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span></div>
+                <div class="card-body text-dark">
+
+                    <p class="card-text">Gosto muito nessa escola.</p>
+                </div>
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Gosto muito nessa escola.</p>
+                </div>
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Gosto muito nessa escola.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">LUCAS DA A BUNDA</div>
+
+    </div>
+
+</div>
