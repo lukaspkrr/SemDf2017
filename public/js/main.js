@@ -1,7 +1,7 @@
-angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResource'])
-	.config(function($routeProvider, $locationProvider, $httpProvider) {
+angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'])
+    .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
-		/*$httpProvider.interceptors.push('tokenInterceptor');*/
+/*$httpProvider.interceptors.push('tokenInterceptor');*/
 
         $locationProvider.html5Mode(true);
 
@@ -9,19 +9,22 @@ angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResourc
 			templateUrl: 'partials/principal.html'
 		});
 
-            $routeProvider.when('/map', {
-							templateUrl: 'partials/map.html',
-							controller: 'mapController'
+        $routeProvider.when('/map', {
+            templateUrl: 'partials/map.html',
+            controller: 'mapController'
 
-						});
+        });
 
-            $routeProvider.when('/help', {
+        $routeProvider.when('/help', {
             templateUrl: 'partials/help.html'
         });
+            
 
         $routeProvider.when('/formulario/:id', {
             templateUrl: 'partials/formulario.html'
         });
 
-		$routeProvider.otherwise({redirectTo: '/inicio'});
-	});
+        $routeProvider.otherwise({
+            redirectTo: '/inicio'
+        });
+});
