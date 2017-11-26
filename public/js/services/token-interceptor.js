@@ -1,4 +1,4 @@
-angular.module('alurapic')
+/*angular.module('semdf')
     .factory('tokenInterceptor', function($q, $window, $location) {
 
         var interceptor = {};
@@ -34,4 +34,4 @@ angular.module('alurapic')
 
     return interceptor;
 
-});
+});*/

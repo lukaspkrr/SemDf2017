@@ -1,22 +1,18 @@
 var mongoose = require('mongoose');
 
 var schema = mongoose.Schema({
-    titulo: {
+    bairro: {
         type: String,
         required: true
     },
-    url: {
+    modalidade: {
         type: String,
-        required: true
-    },
-    grupo: {
-        type: Number,
         required: true
     },
     descricao: {
         type: String,
-        required: false
+        required: true
     }
 });
 
-mongoose.model('Foto', schema);
+mongoose.model('Escola', schema);
