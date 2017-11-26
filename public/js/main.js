@@ -1,3 +1,4 @@
+
 angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'])
     .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
