@@ -18,7 +18,8 @@ angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResourc
         });
     
         $routeProvider.when('/formulario/:id', {
-            templateUrl: 'partials/formulario.html'
+            templateUrl: 'partials/formulario.html',
+            controller:"formularioController"
         });
     
 		$routeProvider.otherwise({redirectTo: '/inicio'});
