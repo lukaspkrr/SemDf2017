@@ -23,7 +23,8 @@ angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'
         });
 
         $routeProvider.when('/formulario/:id', {
-            templateUrl: 'partials/formulario.html'
+            templateUrl: 'partials/formulario.html',
+            controller:"formularioController"
         });
 
         $routeProvider.otherwise({
