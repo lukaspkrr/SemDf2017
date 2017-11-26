@@ -1,7 +1,7 @@
 {
-  "name": "alurapic-mean",
+  "name": "semdf",
   "version": "1.0.0",
-  "description": "Alurapic is full stack application who is using MEAN",
+  "description": "SemDF é um projeto de matricula para escolas publicas.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,10 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/osmarpetry/alurapic-mean/issues"
-  },
-  "homepage": "https://github.com/osmarpetry/alurapic-mean#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
     "consign": "^0.1.2",

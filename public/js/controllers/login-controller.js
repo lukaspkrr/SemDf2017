@@ -1,4 +1,4 @@
-angular.module('alurapic').controller('LoginController', function($scope, $http, $location) {
+angular.module('semdf').controller('LoginController', function($scope, $http, $location) {
 
     $scope.usuario = {};
     $scope.mensagem = '';

@@ -1,18 +1,18 @@
 var mongoose = require('mongoose');
 var api = {};
-var model = mongoose.model('Foto');
+var model = mongoose.model('Escola');
 
 api.lista = function(req, res){
-    model.find(function(error, fotos){
+    model.find(function(error, escolas){
         if(error){
             res.status(500).json(error);
         }
-        res.json(fotos);
+        res.json(escolas);
     });
     model
         .find({})
-        .then(function(fotos){
-            res.json(fotos);    
+        .then(function(escolas){
+            res.json(escolas);    
         },  function(error){
             console.log(error);
             res.status(500).json(error);
@@ -21,16 +21,32 @@ api.lista = function(req, res){
 
 api.buscaPorId = function(req, res){
     model.findById(req.params.id)
-        .then(function(foto) {
-            if (!foto) throw new Error('Foto não encontrada');
-            res.json(foto);
+        .then(function(escola) {
+            if (!escola) throw new Error('Escola não encontrada');
+            res.json(escola);
         }, function(error) {
         console.log(error);
         res.sendStatus(500);
     });
 };
 
-api.removePorId = function(req, res){
+api.adiciona = function(req, res){
+    model.create(req.body)
+        .then(function(escola) {
+            res.json(escola);
+        }, function(error) {
+            console.log(error);
+            res.sendStatus(500);
+    });
+};
+
+
+
+
+module.exports = api;
+
+
+/*api.removePorId = function(req, res){
     model.remove({'_id' : req.params.id})
         .then(function() {
             res.sendStatus(200);
@@ -40,24 +56,13 @@ api.removePorId = function(req, res){
     });
 };
 
-api.adiciona = function(req, res){
-    model.create(req.body)
-        .then(function(foto) {
-            res.json(foto);
-        }, function(error) {
-            console.log(error);
-            res.sendStatus(500);
-    });
-};
 
 api.atualiza = function(req, res){
     model.findByIdAndUpdate(req.params.id, req.body)
-        .then(function(foto) {
-            res.json(foto);
+        .then(function(escola) {
+            res.json(escola);
         }, function(error) {
             console.log(error);
             res.sendStatus(500);
     });
-};
-
-module.exports = api;
+};*/
