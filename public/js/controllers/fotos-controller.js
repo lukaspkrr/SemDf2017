@@ -1,4 +1,4 @@
-angular.module('alurapic').controller('FotosController', function($scope, recursoFoto) {
+angular.module('semdf').controller('FotosController', function($scope, recursoFoto) {
 	
 	$scope.fotos = [];
 	$scope.filtro = '';

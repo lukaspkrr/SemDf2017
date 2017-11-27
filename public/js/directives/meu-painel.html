@@ -580,13 +580,13 @@ m-503 -26 c2 -25 1 -47 -1 -50 -2 -2 -22 -4 -43 -4 l-38 0 0 50 0 50 39 0 39
         }); 
 
 
-        var nav = $('#menuCor');   
+        var nav = $('#menuCor');
             $(window).scroll(function () { 
                 if ($(this).scrollTop() > 400) { 
                     nav.addClass("menu-fixo");
                     $('svg').removeClass('animate');
                 } else { 
-                    nav.removeClass("menu-fixo"); 
+                    nav.removeClass("menu-fixo");
                     $('svg').addClass('animate');
                 }
                 if($('html, body').scrollTop() > 400){

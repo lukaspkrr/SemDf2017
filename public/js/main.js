@@ -1,4 +1,5 @@
-angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'])
+
+angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'])
     .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
 /*$httpProvider.interceptors.push('tokenInterceptor');*/
@@ -10,8 +11,13 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResour
 		});
 
         $routeProvider.when('/map', {
+
             templateUrl: 'partials/map.html',
             controller: 'mapController'
+         
+        });
+        $routeProvider.when('/acompanhamento', {
+            templateUrl: 'partials/acompanhamento.html'
 
         });
 
@@ -21,7 +27,8 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResour
             
 
         $routeProvider.when('/formulario/:id', {
-            templateUrl: 'partials/formulario.html'
+            templateUrl: 'partials/formulario.html',
+            controller:"formularioController"
         });
 
         $routeProvider.otherwise({
