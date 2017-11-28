@@ -6,8 +6,9 @@ api.lista = function(req, res){
     model.find(function(error, escolas){
         if(error){
             res.status(500).json(error);
+        }else{
+            res.json(escolas);
         }
-        res.json(escolas);
     });
     model
         .find({})

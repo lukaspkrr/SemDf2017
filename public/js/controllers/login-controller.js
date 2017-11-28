@@ -14,6 +14,6 @@ angular.module('semdf').controller('LoginController', function($scope, $http, $l
             $scope.usuario = {};
             $scope.mensagem = 'Login/Senha incorretos';
         });*/
-        $location.path('/');
+     /*   $location.path('/');*/
     };
 });
