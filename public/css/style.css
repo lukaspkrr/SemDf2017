@@ -4,14 +4,9 @@ Anima em 4s cada path
 forwards faz com que a animação termine e matenha o estado final dela (ou seja, o objeto totalmen preenchido)
 remova o infinite para a animação acontecer apenas uma vez */
 
-html, body {height:100%;}
-
-
-
     svg.animate path {
         animation: svg-animate 50s forwards infinite;
     }
-
     /* Função principal da animação, levar o dashoffset até 0. Nesse caso ele vai do dashoffset que foi definido com jQuery até 0. Por isso o from está vazio. */
 
     @keyframes svg-animate {
@@ -35,7 +30,6 @@ html, body {height:100%;}
     #menuCor {
         background-color: #28a745;
     }
-
 
     .navbar {
         position: relative;
@@ -65,20 +59,20 @@ html, body {height:100%;}
     }
 
     @media only screen and (min-width:768px) {
-        .navbar > .container {
+        .navbar>.container {
             padding: 0
         }
-        .lhnav > li > a:not(.dropdown-toggle) {
+        .lhnav>li>a:not(.dropdown-toggle) {
             border-bottom: 0 solid #ffe200
         }
-        .lhnav > li.active > a:not(.dropdown-toggle),
-        .lhnav > li > a:not(.dropdown-toggle):focus,
-        .lhnav > li > a:not(.dropdown-toggle):hover {
+        .lhnav>li.active>a:not(.dropdown-toggle),
+        .lhnav>li>a:not(.dropdown-toggle):focus,
+        .lhnav>li>a:not(.dropdown-toggle):hover {
             border-bottom-width: 3px
         }
     }
 
-    .nav > li > a {
+    .nav>li>a {
         position: relative;
         display: block;
         padding: 10px 15px;
@@ -94,7 +88,6 @@ html, body {height:100%;}
         background: 0 0
     }
 
-
     .menu-fixo {
         position: fixed !important;
         top: 0;
@@ -109,142 +102,298 @@ html, body {height:100%;}
         stroke-linejoin: round;
         stroke-miterlimit: 10;
     }
-    
-            /*MAPA*/
-
+    /*MAPA*/
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
+
+    .configPagMap {
+        width: 100%;
+    }
+
+    .myTab {
+        margin-top: 5%;
+    }
+
+.configuraAvaPagMap{
+    padding-bottom: 5%;
+}
+    .configSelecPagMap {
+        margin-bottom: 5%;
+    }
+
+    .TituloPagMap {
+        margin-bottom: 5%;
+        padding-top: 10%;
+    }
+
+    #map {
         height: 100%;
-        
-      }
+    }
+
     .checked {
-          color: orange;
-  }
+        color: orange;
+    }
+    /*Home estilo*/
 
+    .jumbotron {
+        background-color: #ffe200;
+        text-align: center;
+    }
 
+    .nav-item {
+        margin: 10px;
+    }
+   /*
+    .nav-item .nav-link.active {
+        background-color: #28a745;
+    }
 
-            /*Home estilo*/
+    .nav-item .nav-link {
+        border: solid 1px #28a745;
+        color: #28a745;
+    }
+    */
 
-.jumbotron{
-    background-color: #ffe200;
-    text-align: center;
+    .comentarioMap{
+        margin-top: 25px;
 }
 
-.nav-item{
-    margin: 10px;
-}
+    #controleJub {
+        margin: 30px;
+        margin-left: -2px;
+    }
+    /*Roda pé estilo*/
 
-.nav-item .nav-link.active{
-    background-color: #28a745;
-}
+    .configRow {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-.nav-item .nav-link{
-    border: solid 1px #28a745;
-    color: #28a745;
-}
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+    footer {
+        background-color: #035b18;
+        min-height: 100px;
+        font-family: 'Open Sans', sans-serif;
+    }
 
-#controleJub{
-margin: 30px;
-    margin-left: -2px;
-}
-    
+    .footerleft {
+        margin-top: 50px;
+        padding: 0 36px;
+    }
 
-             /*Roda pé estilo*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
-footer { background-color:#035b18; min-height:235px; font-family: 'Open Sans', sans-serif; }
-.footerleft { margin-top:50px; padding:0 36px; }
-.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
+    .logofooter {
+        margin-bottom: 10px;
+        font-size: 25px;
+        color: #fff;
+        font-weight: 700;
+    }
 
-.footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
-.footerleft p i { width:20px; color:#999;}
+    .footerleft p {
+        color: #fff;
+        font-size: 12px !important;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 15px;
+    }
+/*Que porra é essa aqui*/
+    #77{
+        margin-top: 45px;
+    }
 
+    .footerleft p i {
+        width: 20px;
+        color: #999;
+    }
 
-.paddingtop-bottom {  margin-top:50px;}
-.footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
-.footer-ul li { line-height:29px; font-size:12px;}
-.footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
-.footer-ul i { margin-right:10px;}
-.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+    .paddingtop-bottom {
+        margin-top: 10px;
+    }
 
-.social:hover {
-     -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-     -o-transform: scale(1.1);
- }
+    .footer-ul {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-left: 2px;
+    }
 
-#rowSem{
-    margin-right: 0px;
-    margin-left: 0px;
-}
+    .footer-ul li {
+        line-height: 29px;
+        font-size: 12px;
+    }
 
- .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
- .icon-ul li { line-height:75px; width:100%; float:left;}
- .icon { float:left; margin-right:5px;}
+    .footer-ul li a {
+        color: #a0a3a4;
+        transition: color 0.2s linear 0s, background 0.2s linear 0s;
+    }
 
+    .footer-ul i {
+        margin-right: 10px;
+    }
 
- .copyright { min-height:40px; background-color:#054514;}
- .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
- .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
- .post p { font-size:12px; color:#FFF; line-height:20px;}
- .post p span { display:block; color:#8f8f8f;}
- .bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
- .bottom_ul li { float:left; line-height:40px;}
- .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
- .bottom_ul li a { color:#FFF;  font-size:12px;}
+    .footer-ul li a:hover {
+        transition: color 0.2s linear 0s, background 0.2s linear 0s;
+        color: #ff670f;
+    }
 
- #social-fb{
-    color: #4867aa;
- }
- #social-tw{
-     color: #1da1f2;
- }
- #social-gp{
-     color: #dc4638;
- }
- #social-em{
-     color: white;
- }
+    .social:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
 
- #social-fb:hover{
-    color: #305198;
- }
- #social-tw:hover{
-     color: #0080ce;
- }
- #social-gp:hover{
-     color: #d9200e;
- }
- #social-em:hover{
-     color: #c6c6c6;
- }
+    #rowSem {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 
-            /*Acompanhamento*/
+    .icon-ul {
+        list-style-type: none !important;
+        margin: 0px;
+        padding: 0px;
+    }
 
+    .icon-ul li {
+        line-height: 75px;
+        width: 100%;
+        float: left;
+    }
 
-img{
-    width: 70%;
-    margin-left: 15%;
-}
-.colorFundoGray{
-    background-color: silver;
-}
+    .icon {
+        float: left;
+        margin-right: 5px;
+    }
 
-.fontColorGreen{
-    background-color: green;
-}
+    .copyright {
+        min-height: 40px;
+        background-color: #054514;
+    }
 
-.fontColorWhite{
-    color: white;
-}
+    .copyright p {
+        text-align: left;
+        color: #FFF;
+        padding: 10px 0;
+        margin-bottom: 0px;
+    }
 
-#titulo{
-        color: yellow;
-}
-
+    .heading7 {
+        font-size: 21px;
+        font-weight: 700;
+        color: #d9d6d6;
+        margin-bottom: 22px;
+    }
+/*Isso aqui é novo*/
 #divForm{
-    padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 2em
 }
 
+    .post p {
+        font-size: 12px;
+        color: #FFF;
+        line-height: 20px;
+    }
+
+    .post p span {
+        display: block;
+        color: #8f8f8f;
+    }
+
+    .bottom_ul {
+        list-style-type: none;
+        float: right;
+        margin-bottom: 0px;
+    }
+
+    .bottom_ul li {
+        float: left;
+        line-height: 40px;
+    }
+
+    .bottom_ul li:after {
+        content: "/";
+        color: #FFF;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .bottom_ul li a {
+        color: #FFF;
+        font-size: 12px;
+    }
+
+    #social-fb {
+        color: #4867aa;
+    }
+
+    #social-tw {
+        color: #1da1f2;
+    }
+
+    #social-gp {
+        color: #dc4638;
+    }
+
+    #social-em {
+        color: white;
+    }
+
+    #social-fb:hover {
+        color: #305198;
+    }
+
+    #social-tw:hover {
+        color: #0080ce;
+    }
+
+    #social-gp:hover {
+        color: #d9200e;
+    }
+
+    #social-em:hover {
+        color: #c6c6c6;
+    }
+/*isso aqui é novo tambem*/
+.checkText{
+    margin-left: 1.5em;
+}
+    /*Acompanhamento*/
+
+    .imgUacom {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .configTituloPrin {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .colorFundoGray {
+        width: 100%;
+        height: 1000px;
+    }
+
+    .fontColorGreen {
+        background-color: green;
+        border-radius: 5%;
+    }
+
+    .fontColorWhite {
+        color: white;
+    }
+
+    #titulo {
+        color: yellow;
+        font-size: 1.3em;
+    }
+
+    #tituloPagina {
+        font-size: 1.7em;
+    }
+
+    .fontTamanho {
+        font-size: 96%;
+    }
+
+    .bordaRedonda {
+        border-radius: -5%;
+    }

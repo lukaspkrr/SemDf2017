@@ -1,7 +1,7 @@
 module.exports = function(uri){
     var mongoose = require('mongoose');
 
-    mongoose.connect('mongodb://'+uri)
+    mongoose.connect('mongodb://' + uri, { useMongoClient: true });
 
     mongoose.connection.on('connected', function(){
         console.log('Conectado ao MongoDB');

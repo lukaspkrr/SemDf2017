@@ -1,4 +1,4 @@
-angular.module('alurapic').controller('formularioController', function($scope){
+angular.module('semdf').controller('formularioController', function($scope){
     
     $scope.cadastro = {};
     
