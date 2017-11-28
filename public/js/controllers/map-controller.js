@@ -55,7 +55,7 @@ angular.module('alurapic').controller('mapController', function($scope, $http) {
      
     
     $scope.cidadeChange = function(cidade){
-        console.log(cidade)
+        console.log(cidade);
         
         /*$http.put("/url", data)
             .success(function () {

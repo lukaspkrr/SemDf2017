@@ -8,7 +8,7 @@
             <div class="form-group col-md-3">
 
                 <h3 class="mr-sm-2" for="inlineFormCustomSelect">Cidade:</h3>
-                <select ng-model="map.cidade" ng-change="cidadeChange(cidade)" ng-options="cidade.nome for cidade in cidades" class="custom-select" id="inlineFormCustomSelect">
+                <select ng-model="map.cidade" ng-change="cidadeChange(map.cidade)" ng-options="cidade.nome for cidade in cidades" class="custom-select" id="inlineFormCustomSelect">
                             <option value="">Selecionar</option>
 
                           </select>
