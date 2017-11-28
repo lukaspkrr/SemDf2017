@@ -554,10 +554,10 @@ m-503 -26 c2 -25 1 -47 -1 -50 -2 -2 -22 -4 -43 -4 l-38 0 0 50 0 50 39 0 39
         <a id="font_Resto" href="/help"><strong>Ajuda</strong></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="#"><strong>Cadastra-se</strong></a>
+        <a id="font_Resto" href="/cadastro"><strong>Cadastra-se</strong></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="#"><strong>Login</strong></a>
+        <a id="font_Resto" href="" data-toggle="modal" data-target="#login"><strong>Login</strong></a>
       </li>
     </ul>
 
@@ -567,6 +567,42 @@ m-503 -26 c2 -25 1 -47 -1 -50 -2 -2 -22 -4 -43 -4 l-38 0 0 50 0 50 39 0 39
     </div>
 
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true" ng-controller="LoginController">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="login">Entrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+					<input ng-model="user.login" type="text" class="form-control" placeholder="Login" >
+				</div>
+				<div class="form-group">
+					<input ng-model="user.senha" type="password" class="form-control" placeholder="Senha" >
+				</div>
+				<div class="form-group">
+					<a href="#">Esqueceu sua senha?</a>
+				</div>
+				<div class="form-group">
+					<input type="checkbox"><label for="">&nbsp;&nbsp;Lembrar-me</label>
+				</div>
+      <div class="form-group text-center">
+        <button type="button" class="btn btn-secondary" ng-click="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-success" ng-click="logar()">Entrar</button>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
 <script type="text/javascript">
     // Basta adiciona a classe animate ao SVG
     // Ai você adicionar como quiser, pode ser baseado no scroll, em algum clique ou qualquer outra ação do usuário
