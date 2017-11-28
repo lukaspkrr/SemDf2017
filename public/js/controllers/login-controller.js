@@ -30,5 +30,4 @@ angular.module('semdf').controller('LoginController', function($scope, $http, $l
         $location.path('/cadastro');
     }
     
-    
 });
