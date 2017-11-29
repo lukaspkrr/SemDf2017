@@ -20,6 +20,9 @@ remova o infinite para a animação acontecer apenas uma vez */
         height: 420px
     }
 
+.obrigatorio{
+    color: red;
+}
     .teste {
         background: #28a745;
         background: radial-gradient(#28a745, black);
