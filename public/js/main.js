@@ -19,7 +19,8 @@ angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'
         });
     
         $routeProvider.when('/cadastro', {
-            templateUrl: 'partials/cadastro.html'
+            templateUrl: 'partials/cadastro.html',
+            controller: 'cadastroController'
         });
 
         $routeProvider.when('/help', {

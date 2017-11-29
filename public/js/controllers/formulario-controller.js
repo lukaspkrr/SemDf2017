@@ -1,9 +1,9 @@
 angular.module('semdf').controller('formularioController', function($scope){
     
-    $scope.cadastro = {};
+    $scope.matricula = {};
     
     $scope.submitForm = function(){
-        console.log($scope.cadastro);
+        console.log($scope.matricula);
     }
     
 });

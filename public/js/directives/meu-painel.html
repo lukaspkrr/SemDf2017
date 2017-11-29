@@ -587,14 +587,41 @@ m-503 -26 c2 -25 1 -47 -1 -50 -2 -2 -22 -4 -43 -4 l-38 0 0 50 0 50 39 0 39
 					<input ng-model="user.senha" type="password" class="form-control" placeholder="Senha" >
 				</div>
 				<div class="form-group">
-					<a href="#">Esqueceu sua senha?</a>
+					<a href="#" ng-click="esqueceuSenha()">Esqueceu sua senha?</a>
 				</div>
 				<div class="form-group">
 					<input type="checkbox"><label for="">&nbsp;&nbsp;Lembrar-me</label>
 				</div>
       <div class="form-group text-center">
-        <button type="button" class="btn btn-secondary" ng-click="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-secondary" ng-click="cadastrar()">Não possuo cadastro</button>
         <button type="button" class="btn btn-success" ng-click="logar()">Entrar</button>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="esqueceuSenha" tabindex="-1" role="dialog" aria-labelledby="esqueceuSenha" aria-hidden="true" ng-controller="LoginController">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="login">Recuperar Senha</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+					<input ng-model="losePass.login" type="text" class="form-control" placeholder="Digite o seu Login" >
+				</div>
+				<div class="form-group">
+					<input ng-model="losePass.email" type="email" class="form-control" placeholder="Digite seu email" >
+				</div>
+      <div class="form-group text-center">
+        <button type="button" class="btn btn-secondary" ng-click="voltarLogin()">Voltar</button>
+        <button type="button" class="btn btn-success" ng-click="RecSenha()">Enviar</button>
       </div>
       <div class="modal-footer"></div>
     </div>
