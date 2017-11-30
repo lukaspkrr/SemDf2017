@@ -15,15 +15,16 @@ module.exports = function(app){
                 console.log('Login ou senha inválidos');
                 res.sendStatus(401);
             }else{
-                var token = jwt.sign( {login: usuario.login}, app.get('secret'), { expiresIn: 86400 /*24h*/ });                
+                var token = jwt.sign( {login: usuario.login}, app.get('secret'), { expiresIn: 86400 });                
                 console.log('Autenticado: token adicionado na resposta');
-                res.set('x-access-token', token); 
+                res.set({'x-access-token': token,
+                        'idUser': usuario._id}); 
                 res.end(); 
             }
         });
     };
 
-    /*api.verificaToken = function(req, res, next) {
+   /* api.verificaToken = function(req, res, next) {
         var token = req.headers['x-access-token'];
         if(token){
             console.log('Token recebido, decodificando');

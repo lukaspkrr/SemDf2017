@@ -1,15 +1,7 @@
 var mongoose = require('mongoose');
 
 var schema = mongoose.Schema({
-    bairro: {
-        type: String,
-        required: true
-    },
-    modalidade: {
-        type: String,
-        required: true
-    },
-    descricao: {
+  comentario: {
         type: String,
         required: true
     }

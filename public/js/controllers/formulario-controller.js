@@ -1,9 +1,17 @@
-angular.module('alurapic').controller('formularioController', function($scope){
-    
-    $scope.cadastro = {};
-    
-    $scope.submitForm = function(){
-        console.log($scope.cadastro);
-    }
-    
-});
+angular.module('semdf')
+    .controller('formularioController', function ($scope, $routeParams, $http) {
+
+
+        $http.get('v1/CidadesUf')
+            .success(function (cidadeUF) {
+                $scope.cidadesUF = cidadeUF
+                    console.log($scope.cidadesUF);
+            })
+            .error(function (error) {
+                console.log(error);
+            });
+
+
+
+
+    });
