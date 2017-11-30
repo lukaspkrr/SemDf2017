@@ -6,26 +6,35 @@
   
     <form action="">
 
+   
         <div class="row configSelecPagMap">
             <div class="form-group col-md-4">
                 <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Cidade:</h3>
-                <select  ng-model="map.cidade" ng-change="cidadeChange(map.cidade)" ng-options="cidade.nome for cidade in cidades | unique:'nome'" class="custom-select col-sm-4" id="inlineFormCustomSelect">
+                <select  ng-model="dados.NO_BAIRRO" ng-change="cidadeChange(dados.NO_BAIRRO)" ng-options="dados.NO_BAIRRO for dados in escolas | unique:'NO_BAIRRO'" class="custom-select col-sm-4" id="inlineFormCustomSelect">
                             <option value="">Selecionar</option>
                           </select>
             </div>
+              
 
      
             <div class="form-group col-md-">
                 <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione Etapas do Ensino:</h3>
-                <select ng-model="map.ensino" ng-change="ensinoChange(map.ensino)" ng-options="ensino.teste for ensino in ensinos" class="custom-select col-md-3" id="inlineFormCustomSelect">
+            
+                <select ng-model="map.ensino" ng-change="ensinoChange(map.ensino)" class="custom-select col-md-3" id="inlineFormCustomSelect">
                             <option value="">Selecionar</option>
+                            <option value="infantil">Ensino Infantil</option>
+                            <option value="fundamental">Ensino Fundamental</option>
+                            <option value="medio">Ensino Médio</option>
+                            <option value="especial">Ensino Especial</option>
+                            
+                            
                           </select>
             </div>
 
       
             <div class="form-group col-md-4">
-                <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Escolas:</h3>
-                <select ng-model="map.escola" ng-change="escolaChange(map.escola)" ng-options="escola.nomeEscola for escola in escolas" class="custom-select col-md-3" id="inlineFormCustomSelect">
+                <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Escola:</h3>
+                <select ng-model="map.escola" ng-change="escolaChange(map.escola)" ng-options="escola.NO_ENTIDADE for escola in escolasFilter" class="custom-select col-md-3" id="inlineFormCustomSelect">
                            <option value="">Selecionar</option>
                           </select>
             </div>
@@ -69,7 +78,7 @@
             </div>
 
             <div class="col-6 ">
-                <a href="/formulario/1" class="btn btn-success">Matricular</a>
+                <a href="" ng-click="enviaIdForm()"  class="btn btn-success">Matricular</a>
             </div>
 
         </div>
