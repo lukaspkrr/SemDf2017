@@ -33,6 +33,10 @@ var schema = mongoose.Schema({
         type: String,
         required: true
     },
+    desc_deficiencia: {
+        type: String,
+        required: true
+    },
     nome_mae: {
         type: String,
         required: true

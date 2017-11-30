@@ -24,6 +24,7 @@ api.lista = function(req, res){
 
 api.listaCidadesUf = function(req, res){
     model.find(function(error, cidadesUF){
+        console.log(cidadesUF)
         if(error){
             res.status(500).json(error);
         }
