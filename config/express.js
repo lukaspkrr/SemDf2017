@@ -5,7 +5,7 @@ var path = require('path');
 
 var app = express();
 
-app.set('secret', 'bananamachucada');
+app.set('secret', 'munhozViado');
 app.use(express.static('./public')); 
 
 app.set('view engine','ejs');
@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 consign({ cwd: 'app' })
     .include('models')
     .then('api')
-    .then('routes/auth.js')
     .then('routes')
     .into(app);
 

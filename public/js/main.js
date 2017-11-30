@@ -2,7 +2,7 @@
 angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'])
     .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
-        /*$httpProvider.interceptors.push('tokenInterceptor');*/
+        $httpProvider.interceptors.push('tokenInterceptor');
 
         $locationProvider.html5Mode(true);
 
