@@ -1,14 +1,17 @@
 angular.module('semdf')
-    .controller('matriculaController', function ($scope, $routeParams, $http) {
+    .controller('matriculaController', function ($scope, $routeParams, $http, $location) {
 
-        $http.get('v1/escolas')
+        
+        $scope.getEscolas = function (){
+            $http.get('v1/escolas')
             .success(function (escola) {
                 $scope.escolas = escola;
             })
             .error(function (error) {
                 console.log(error);
             });
-
+        }
+        $scope.getEscolas()
 
         /*  $scope.enviarBairro = function(dados){
                 $http.get('v1/escolas/' + dados.bairro)
@@ -22,28 +25,9 @@ angular.module('semdf')
             }*/
 
 
-        /*if($routeParams.fotoId) {
-        	recursoFoto.get({fotoId: $routeParams.fotoId}, function(foto) {
-        		$scope.foto = foto; 
-        	}, function(erro) {
-        		console.log(erro);
-        		$scope.mensagem = 'Não foi possível obter a foto'
-        	});
-        }
+   
 
-        $scope.submeter = function() {
-
-        	if ($scope.formulario.$valid) {
-        		cadastroDeFotos.cadastrar($scope.foto)
-        		.then(function(dados) {
-        			$scope.mensagem = dados.mensagem;
-        			if (dados.inclusao) $scope.foto = {};
-        		})
-        		.catch(function(erro) {
-        			$scope.mensagem = erro.mensagem;
-        		});
-        	}
-        };*/
+       
 
         /*Teste de dados no mapa*/
         $scope.cities = [
@@ -80,23 +64,107 @@ angular.module('semdf')
           ];
 
 
-
-
-
-
-
-        $scope.cidadeChange = function (cidade) {
-            console.log(cidade)
-
-            /*$http.put("/url", data)
-                .success(function () {
+            $scope.cidadeChange = function (cidade) {
+            
+           
+           
+            $scope.cidadeMapFirst = []
+            
+            
+                for (var i = 0; i < $scope.escolas.length; i++) {
+                    if ($scope.escolas[i].NO_BAIRRO === cidade.NO_BAIRRO) {
+                        $scope.cidadeMapFirst[i] = $scope.escolas[i]
+                    }
+                }
                 
-                })
-                .error(function () {
-                });*/
+                
+       
+                $scope.ensinos = $scope.cidadeMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+                
+     
+            
         }
 
+        $scope.ensinoChange = function (ensino) {
+         
+           
+            $scope.ensinoMapFirst = []
+            
 
+            if(ensino == "infantil"){    
+               for (var k = 0; k < $scope.ensinos.length; k++) {                   
+                    if ($scope.ensinos[k].Educação_Infantil == "Sim") {       
+                        
+                       $scope.ensinoMapFirst[k] = $scope.ensinos[k]
+                    }
+                }    
+                 $scope.escolasFilter = $scope.ensinoMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+                
+            }else if(ensino == "fundamental"){
+                 for (var k = 0; k < $scope.ensinos.length; k++) {   
+                    if ($scope.ensinos[k].Ensino_Fundamental == "Sim") {
+                       $scope.ensinoMapFirst[k] = $scope.ensinos[k]
+                    }
+                }         
+                 $scope.escolasFilter = $scope.ensinoMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+              
+    
+            }else if(ensino == "medio"){
+         
+                 for (var k = 0; k < $scope.ensinos.length; k++) {
+                   
+                    if ($scope.ensinos[k].Ensino_Médio == "Sim") {
+                    console.log($scope.ensinos[k])
+                        
+                       $scope.ensinoMapFirst[k] = $scope.ensinos[k]
+                    }
+                }
+                
+                 $scope.escolasFilter = $scope.ensinoMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+                
+                
+            }else if(ensino == "especial"){
+             
+                  for (var k = 0; k < $scope.ensinos.length; k++) {   
+                    if ($scope.ensinos[k].EducaçãoEspecial == "Sim") {
+                       $scope.ensinoMapFirst[k] = $scope.ensinos[k]
+                    }
+                }         
+                 $scope.escolasFilter = $scope.ensinoMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+    
+                
+                
+            }
+          
+              
+       
+            
+        }
+        
+        $scope.escolaChange = function (escola){
+            $scope.escolaId = escola._id
+
+        }
+        
+        $scope.enviaIdForm = function(){
+         
+            if($scope.escolaId){
+                $location.path("/formulario/" + $scope.escolaId)
+            }
+            
+        }
+        
+        
 
 
         /*MAPA*/
@@ -148,4 +216,6 @@ angular.module('semdf')
             e.preventDefault();
             google.maps.event.trigger(selectedMarker, 'click');
         }
+
+        
     });
