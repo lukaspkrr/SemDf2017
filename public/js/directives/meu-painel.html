@@ -542,23 +542,33 @@ m-503 -26 c2 -25 1 -47 -1 -50 -2 -2 -22 -4 -43 -4 l-38 0 0 50 0 50 39 0 39
     <ul class="nav ml-md-5 lhnav">
 
       <li class="menu-item active">
-        <a id="font_Resto" href="/inicio" id="fundoLetraMenu"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+        <a href="/inicio" id="fundoLetraMenu"><strong>Home</strong> <span class="sr-only">(current)</span></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="/map"><strong>Matricula</strong></a>
+        <a href="/map"><strong>Matricula</strong></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="/acompanhamento"><strong>Acompanhamento</strong></a>
+        <a href="/acompanhamento"><strong>Acompanhamento</strong></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="/help"><strong>Ajuda</strong></a>
+        <a href="/help"><strong>Ajuda</strong></a>
+      </li>
+       <!--se não tiver logado-->
+      <li class="menu-item">
+        <a href="/cadastro"><strong>Cadastra-se</strong></a>
       </li>
       <li class="menu-item">
-        <a id="font_Resto" href="/cadastro"><strong>Cadastra-se</strong></a>
+        <a href="" data-toggle="modal" data-target="#login"><strong>Login</strong></a>
       </li>
+        <!--Se tiver logado-->
       <li class="menu-item">
-        <a id="font_Resto" href="" data-toggle="modal" data-target="#login"><strong>Login</strong></a>
+        <a id="dropMenuButton" class="dropdown-toggle" href="" data-toggle="dropdown"><strong>Bem-Vindo, Teste</strong></a>
       </li>
+      <div class="dropdown-menu" aria-labelledby="dropMenuButton">
+        <a class="dropdown-item" href="#">Editar Perfil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Sair</a>
+      </div>
     </ul>
 
    </div>
