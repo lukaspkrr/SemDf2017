@@ -148,5 +148,4 @@ angular.module('semdf')
             e.preventDefault();
             google.maps.event.trigger(selectedMarker, 'click');
         }
-
     });
