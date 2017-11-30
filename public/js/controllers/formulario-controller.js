@@ -1,27 +1,36 @@
 angular.module('semdf')
     .controller('matriculaController', function ($scope, $routeParams, $http) {
 
+
         $http.get('v1/escolas')
             .success(function (escola) {
-                $scope.escolas = escola;
-                console.log($scope.escolas);
+                $scope.escolas = escola
+
             })
             .error(function (error) {
                 console.log(error);
             });
 
+        $scope.getGrupos = function () {
+            $http.get('v1/grupos')
+                .success(function (grupo) {
+                    /*  $scope.grupos = grupo*/
+                    $scope.cidades = grupo
 
-        /*  $scope.enviarBairro = function(dados){
-                $http.get('v1/escolas/' + dados.bairro)
-                .success(function (escola) {
-                    $scope.escolas = escola
-                 console.log($scope.escolas);
+
                 })
                 .error(function (error) {
                     console.log(error);
                 });
-            }*/
 
+        }
+        $scope.getGrupos();
+
+        /* $scope.cidades = [
+          {nome: 'brasília'},
+          {nome: 'Guará I'},
+          {nome: 'Sobradinho'}
+        ]*/
 
         /*if($routeParams.fotoId) {
         	recursoFoto.get({fotoId: $routeParams.fotoId}, function(foto) {
@@ -45,6 +54,8 @@ angular.module('semdf')
         		});
         	}
         };*/
+    
+      
 
         /*Teste de dados no mapa*/
         $scope.cities = [
@@ -83,18 +94,47 @@ angular.module('semdf')
 
 
 
-
-
-
         $scope.cidadeChange = function (cidade) {
-            console.log(cidade)
+            $scope.cidadeMapFirst = []
+            if (cidade != null) {
+                for (var i = 0; i < $scope.cidades.length; i++) {
+                    if ($scope.cidades[i].nome === cidade.nome) {
+                        $scope.cidadeMapFirst[i] = $scope.cidades[i]
+                    }
+                }
+                $scope.ensinos = $scope.cidadeMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+            }
+        }
 
-            /*$http.put("/url", data)
-                .success(function () {
-                
-                })
-                .error(function () {
-                });*/
+        $scope.ensinoChange = function (ensino) {
+            $scope.ensinoMapFirst = []
+            if (ensino != null) {
+                for (var k = 0; k < $scope.cidades.length; k++) {
+                    if ($scope.cidades[k].teste === ensino.teste) {
+                        $scope.ensinoMapFirst[i] = $scope.cidades[k]
+                    }
+                }
+                $scope.escolas = $scope.ensinoMapFirst.filter(function (item) {
+                    return item !== '' && item !== null;
+                });
+                console.log($scope.escolas)
+
+            }
+        }
+        
+        $scope.escolaChange = function (escola){
+           
+            
+         
+              
+                 
+                 
+                console.log($scope.escolas)
+
+            
+          
         }
 
 

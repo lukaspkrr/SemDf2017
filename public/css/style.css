@@ -3,32 +3,34 @@ Utiliza o keyframe svg-animate
 Anima em 4s cada path
 forwards faz com que a animação termine e matenha o estado final dela (ou seja, o objeto totalmen preenchido)
 remova o infinite para a animação acontecer apenas uma vez */
+
     svg.animate path {
         animation: svg-animate 50s forwards infinite;
     }
     /* Função principal da animação, levar o dashoffset até 0. Nesse caso ele vai do dashoffset que foi definido com jQuery até 0. Por isso o from está vazio. */
-    
+
     @keyframes svg-animate {
         from {}
         to {
             stroke-dashoffset: 0;
         }
     }
-    
+
     svg {
         height: 420px
     }
-    
+
     .teste {
         background: #28a745;
         background: radial-gradient(#28a745, black);
         text-align: center;
         height: 400px;
     }
-    
+
     #menuCor {
         background-color: #28a745;
     }
+
     .navbar {
         position: relative;
         top: 0;
@@ -43,7 +45,7 @@ remova o infinite para a animação acontecer apenas uma vez */
         transition: transform .15s ease-in-out;
         transform: translate3d(0, 0, 0)
     }
-    
+
     .lhnav li a {
         font-family: Montserrat, 'Arial Black', Verdana;
         font-size: 93.33333334%;
@@ -55,7 +57,7 @@ remova o infinite para a animação acontecer apenas uma vez */
         box-sizing: border-box;
         height: 50px
     }
-    
+
     @media only screen and (min-width:768px) {
         .navbar>.container {
             padding: 0
@@ -69,13 +71,13 @@ remova o infinite para a animação acontecer apenas uma vez */
             border-bottom-width: 3px
         }
     }
-    
+
     .nav>li>a {
         position: relative;
         display: block;
         padding: 10px 15px;
     }
-    
+
     a {
         margin: 0;
         padding: 0;
@@ -85,12 +87,13 @@ remova o infinite para a animação acontecer apenas uma vez */
         vertical-align: baseline;
         background: 0 0
     }
+
     .menu-fixo {
         position: fixed !important;
         top: 0;
         z-index: 99;
     }
-    
+
     .st0 {
         fill: none;
         stroke: white;
@@ -100,9 +103,28 @@ remova o infinite para a animação acontecer apenas uma vez */
         stroke-miterlimit: 10;
     }
     /*MAPA*/
-
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
+
+    .configPagMap {
+        width: 100%;
+    }
+
+    .myTab {
+        margin-top: 5%;
+    }
+
+.configuraAvaPagMap{
+    padding-bottom: 5%;
+}
+    .configSelecPagMap {
+        margin-bottom: 5%;
+    }
+
+    .TituloPagMap {
+        margin-bottom: 5%;
+        padding-top: 10%;
+    }
 
     #map {
         height: 100%;
@@ -111,30 +133,35 @@ remova o infinite para a animação acontecer apenas uma vez */
     .checked {
         color: orange;
     }
-
     /*Home estilo*/
 
     .jumbotron {
         background-color: #ffe200;
         text-align: center;
     }
+
     .nav-item {
         margin: 10px;
     }
-
+   /*
     .nav-item .nav-link.active {
         background-color: #28a745;
     }
+
     .nav-item .nav-link {
         border: solid 1px #28a745;
         color: #28a745;
     }
+    */
+
+    .comentarioMap{
+        margin-top: 25px;
+}
+
     #controleJub {
         margin: 30px;
         margin-left: -2px;
     }
-
-
     /*Roda pé estilo*/
 
     .configRow {
@@ -145,7 +172,7 @@ remova o infinite para a animação acontecer apenas uma vez */
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
     footer {
         background-color: #035b18;
-        min-height: 200px;
+        min-height: 100px;
         font-family: 'Open Sans', sans-serif;
     }
 
@@ -167,27 +194,31 @@ remova o infinite para a animação acontecer apenas uma vez */
         font-family: 'Open Sans', sans-serif;
         margin-bottom: 15px;
     }
+/*Que porra é essa aqui*/
+    #77{
+        margin-top: 45px;
+    }
 
     .footerleft p i {
         width: 20px;
         color: #999;
     }
 
-
     .paddingtop-bottom {
-        margin-top: 50px;
+        margin-top: 10px;
     }
-
 
     .footer-ul {
         list-style-type: none;
         padding-left: 0px;
         margin-left: 2px;
     }
+
     .footer-ul li {
         line-height: 29px;
         font-size: 12px;
     }
+
     .footer-ul li a {
         color: #a0a3a4;
         transition: color 0.2s linear 0s, background 0.2s linear 0s;
@@ -201,72 +232,89 @@ remova o infinite para a animação acontecer apenas uma vez */
         transition: color 0.2s linear 0s, background 0.2s linear 0s;
         color: #ff670f;
     }
+
     .social:hover {
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
         -o-transform: scale(1.1);
     }
+
     #rowSem {
         margin-right: 0px;
         margin-left: 0px;
     }
+
     .icon-ul {
         list-style-type: none !important;
         margin: 0px;
         padding: 0px;
     }
+
     .icon-ul li {
         line-height: 75px;
         width: 100%;
         float: left;
     }
+
     .icon {
         float: left;
         margin-right: 5px;
     }
+
     .copyright {
         min-height: 40px;
         background-color: #054514;
     }
+
     .copyright p {
         text-align: left;
         color: #FFF;
         padding: 10px 0;
         margin-bottom: 0px;
     }
+
     .heading7 {
         font-size: 21px;
         font-weight: 700;
         color: #d9d6d6;
         margin-bottom: 22px;
     }
+/*Isso aqui é novo*/
+#divForm{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 2em
+}
+
     .post p {
         font-size: 12px;
         color: #FFF;
         line-height: 20px;
     }
+
     .post p span {
         display: block;
         color: #8f8f8f;
     }
-
-
 
     .bottom_ul {
         list-style-type: none;
         float: right;
         margin-bottom: 0px;
     }
+
     .bottom_ul li {
         float: left;
         line-height: 40px;
     }
+
     .bottom_ul li:after {
         content: "/";
         color: #FFF;
         margin-right: 8px;
         margin-left: 8px;
     }
+
     .bottom_ul li a {
         color: #FFF;
         font-size: 12px;
@@ -303,23 +351,27 @@ remova o infinite para a animação acontecer apenas uma vez */
     #social-em:hover {
         color: #c6c6c6;
     }
-
+/*isso aqui é novo tambem*/
+.checkText{
+    margin-left: 1.5em;
+}
     /*Acompanhamento*/
 
-    img {
+    .imgUacom {
         width: 70%;
         margin-left: 15%;
     }
 
     .configTituloPrin {
-        padding-top: 20%;
+        padding-top: 10%;
         padding-bottom: 10%;
     }
+
     .colorFundoGray {
-        background-color: #eaffef;
         width: 100%;
         height: 1000px;
     }
+
     .fontColorGreen {
         background-color: green;
         border-radius: 5%;
@@ -328,6 +380,7 @@ remova o infinite para a animação acontecer apenas uma vez */
     .fontColorWhite {
         color: white;
     }
+
     #titulo {
         color: yellow;
         font-size: 1.3em;
@@ -340,6 +393,7 @@ remova o infinite para a animação acontecer apenas uma vez */
     .fontTamanho {
         font-size: 96%;
     }
+
     .bordaRedonda {
         border-radius: -5%;
     }

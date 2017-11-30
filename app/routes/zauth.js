@@ -5,7 +5,7 @@ module.exports = function(app){
     app.use('/*', api.verificaToken);
     */
     
-    app.all('/*', function(req, res){
+    app.use('/*', function(req, res){
         res.render('index', function(erro, html){
             res.send(html);
         });

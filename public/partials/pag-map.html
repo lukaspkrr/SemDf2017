@@ -1,159 +1,112 @@
-<div class="container">
-    <h1>Mátricula</h1>
-    <h5>Selecione ....</h5>
-      <br>
-        <form action="">
-            <div class="row">
-                <div class="form-group col-md-3">
+<div class="container configPagMap">
+   
+     <center>
+       <p class="TituloPagMap"><strong id="tituloPagina">Matrícula</strong></p>
+    </center>
+  
+    <form action="">
 
-                    <h3 class="mr-sm-2" for="inlineFormCustomSelect">Cidade:</h3>
-                    <select class="custom-select" id="inlineFormCustomSelect">
-                            <option selected>Choose...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+        <div class="row configSelecPagMap">
+            <div class="form-group col-md-4">
+                <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Cidade:</h3>
+                <select  ng-model="map.cidade" ng-change="cidadeChange(map.cidade)" ng-options="cidade.nome for cidade in cidades | unique:'nome'" class="custom-select col-sm-4" id="inlineFormCustomSelect">
+                            <option value="">Selecionar</option>
                           </select>
-                </div>
-
-
-                <div class="form-group col-md-4">
-                    <h3 class="mr-sm-2" for="inlineFormCustomSelect">Nivel escolar:</h3>
-                    <select class="custom-select" id="inlineFormCustomSelect">
-                            <option selected>Choose...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                </div>
-
-                <div class="form-group col-md-4 ">
-                    <h3 class="mr-sm-2" for="inlineFormCustomSelect">Escolas:</h3>
-                    <select class="custom-select" id="inlineFormCustomSelect">
-                            <option selected>CF 01</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                </div>
-
-            </div>
-        </form>
-
-
-
-        <div class="row">
-
-
-            <div style="height: 400px;" class=" col-md-7">
-             <div id="map">
-
-             </div>
-
-                <script>
-             
-                    
-                  function initMap() {
-        var escola = {lat: -15.791896, lng: -47.864301};
-        var escola2 = {lat: -15.799596, lng: -47.864301};
-                      
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: escola
-        });
-                      
-        var marker = new google.maps.Marker({
-          position: escola,
-          map: map
-        });
-                      
-         var marker2 = new google.maps.Marker({
-          position: escola2,
-          map: map
-        });
-                      
-                      
-      }   
-                    
-            </script>
-           
-        <script src="../js/services/api-google.js"></script>
-
-
             </div>
 
-            <div class="row justify-content-md-center">
+     
+            <div class="form-group col-md-">
+                <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione Etapas do Ensino:</h3>
+                <select ng-model="map.ensino" ng-change="ensinoChange(map.ensino)" ng-options="ensino.teste for ensino in ensinos" class="custom-select col-md-3" id="inlineFormCustomSelect">
+                            <option value="">Selecionar</option>
+                          </select>
+            </div>
 
-                <div class="offset-md-1 ">
-                  <h5 class="">Imformações sobre a escola:</h5>
-                    <div id="" class="card  card-block">
-                        <h6>Endereço: Asa Sul 304</h6>
-
-                        <br>
-
-                        <h6>Telefones: (61)3243-3213</h6>
-                        <h6>Telefones: (61)3243-3213</h6>
-
-                    </div>
-                </div>
-
-                <div class="col-6 ">
-                        <a type="button" href="/formulario/1" class="btn btn-success">Matricular</a>
-                </div>
-
+      
+            <div class="form-group col-md-4">
+                <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Escolas:</h3>
+                <select ng-model="map.escola" ng-change="escolaChange(map.escola)" ng-options="escola.nomeEscola for escola in escolas" class="custom-select col-md-3" id="inlineFormCustomSelect">
+                           <option value="">Selecionar</option>
+                          </select>
             </div>
 
         </div>
+        
+    </form>
 
-        <br>
 
-<br>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Avaliações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-            </li>
 
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="row">
 
-<br>
-           <div class="card border-dark mb-3">
-              <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span></div>
-              <div class="card-body text-dark">
-               
-                <p class="card-text">Gosto muito nessa escola.</p>
-              </div>
-             </div>
-             <div class="card border-dark mb-3">
-              <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star "></span>
-                      <span class="fa fa-star"></span></div>
-              <div class="card-body text-dark">
-                  <p class="card-text">Gosto muito nessa escola.</p>
-              </div>
-             </div>
-             <div class="card border-dark mb-3">
-              <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star "></span>
-                      <span class="fa fa-star "></span>
-                      <span class="fa fa-star"></span></div>
-              <div class="card-body text-dark">
-                <p class="card-text">Gosto muito nessa escola.</p>
-              </div>
-             </div>
-          </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">LUCAS DA A BUNDA</div>
+
+      <div style="height: 400px;" class=" col-md-7">
+            <div id="map">
+
+            </div>
+
+           
+
+        
+
+
+        </div>
+
+
+        <div class="row justify-content-md-center">
+
+
+            <div class="card border-dark mb-3">
+                <div class="card-header">Imformações sobre a escola:&nbsp;&nbsp;</div>
+                <div class="card-body text-dark">
+
+                    <h6>Endereço: Asa Sul 304</h6>
+
+                    <br>
+
+                    <h6>Telefones: (61)3243-3213</h6>
+                    <h6>Telefones: (61)3243-3213</h6>
+                </div>
+            </div>
+
+            <div class="col-6 ">
+                <a href="/formulario/1" class="btn btn-success">Matricular</a>
+            </div>
 
         </div>
 
     </div>
+
+ <div class="form-gruop configuraAvaPagMap">
+   
+    <ul class="nav nav-pills myTab" role="tablist">
+        <li class="nav-item">
+           
+            <a class="btn btn-outline-success" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Avaliações</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-outline-success" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+
+    </ul>
+    <div class="tab-content comentarioMap" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+            <div class="card border-dark mb-3 ">
+                <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span></div>
+                <div class="card-body text-dark">
+
+                    <p class="card-text">Gosto muito dessa escola.</p>
+                </div>
+            </div>
+         
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">STREET+n DA A BUNDA NA STREET</div>
+
+    </div>
+</div>
+</div>

@@ -17,13 +17,18 @@ angular.module('semdf', ['minhasDiretivas', 'ngAnimate', 'ngRoute', 'ngResource'
         $routeProvider.when('/acompanhamento', {
             templateUrl: 'partials/acompanhamento.html'
         });
+    
+        $routeProvider.when('/cadastro', {
+            templateUrl: 'partials/cadastro.html'
+        });
 
         $routeProvider.when('/help', {
             templateUrl: 'partials/help.html'
         });
 
         $routeProvider.when('/formulario/:id', {
-            templateUrl: 'partials/formulario.html'
+            templateUrl: 'partials/formulario.html',
+            controller:"formularioController"
         });
 
         $routeProvider.otherwise({
