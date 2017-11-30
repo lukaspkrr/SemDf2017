@@ -1,3 +1,4 @@
+
 angular.module('semdf').controller('LoginController', function($scope, $http, $location) {
 
 
@@ -29,6 +30,5 @@ angular.module('semdf').controller('LoginController', function($scope, $http, $l
         $('#login').modal('hide');
         $location.path('/cadastro');
     }
-    
     
 });

@@ -4,7 +4,6 @@ angular.module('semdf')
         $http.get('v1/escolas')
             .success(function (escola) {
                 $scope.escolas = escola;
-                console.log($scope.escolas);
             })
             .error(function (error) {
                 console.log(error);
@@ -149,5 +148,4 @@ angular.module('semdf')
             e.preventDefault();
             google.maps.event.trigger(selectedMarker, 'click');
         }
-
     });

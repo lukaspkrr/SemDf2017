@@ -9,14 +9,6 @@ api.lista = function(req, res){
         }
             res.json(escolas);
     });
-    /*model
-        .find({})
-        .then(function(escolas){
-            res.json(escolas);    
-        },  function(error){
-            console.log(error);
-            res.status(500).json(error);
-        });*/
 };
 
 module.exports = api;
