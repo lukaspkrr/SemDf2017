@@ -4,8 +4,7 @@ var schema = mongoose.Schema({
     nome_estudante: {
         type: String,
         required: true
-    }
-    ,
+    },
     date: {
         type: Date,
         required: true
@@ -31,10 +30,6 @@ var schema = mongoose.Schema({
         required: true
     },
     tipo_deficiencia: {
-        type: String,
-        required: true
-    },
-    detalhes_deficiencia: {
         type: String,
         required: true
     },
@@ -74,10 +69,6 @@ var schema = mongoose.Schema({
         type: String,
         required: true
     },
-    endereco: {
-        type: String,
-        required: true
-    },
     cep: {
         type: String,
         required: true
@@ -95,10 +86,6 @@ var schema = mongoose.Schema({
         required: true
     },
     complemento: {
-        type: String,
-        required: true
-    },
-    org_expedicao: {
         type: String,
         required: true
     },

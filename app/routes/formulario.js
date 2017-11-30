@@ -3,10 +3,9 @@ module.exports = function(app){
     
       app.route('/v1/formularios')
         .get(api.lista)
+        .get(api.listaCidadesUf)
         .post(api.adiciona);
 
     app.route('/v1/formularios/:id')
         .get(api.buscaPorId);
-        /*.delete(api.removePorId)
-        .put(api.atualiza)*/
 };

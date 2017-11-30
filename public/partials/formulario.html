@@ -12,47 +12,47 @@
             <h3>Dados do estudante</h3>
         </div>
         <div class="form-group">
-            <label class="form-control-label" for="nomeEstud">Nome Completo do(a) estudante <strong class="obrigatorio">*</strong></label>
-            <input type="text" class="form-control" ng-model="matricula.nome" id="nomeEstud" name="nomeEstud" placeholder="" required>
+            <label class="form-control-label" for="nomeEstud">Nome Completo do(a) estudante</label>
+            <input type="text" class="form-control" ng-model="cadastro.nome" id="nomeEstud" name="nomeEstud" placeholder="">
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="dataNasc">Data de nascimento <strong class="obrigatorio">*</strong></label>
-                <input type="date" class="form-control" ng-model="matricula.dataNasc" id="dataNasc" name="dataNasc" placeholder="" required>
+                <label class="form-control-label" for="dataNasc">Data de nascimento</label>
+                <input type="date" class="form-control" ng-model="cadastro.dataNasc" id="dataNasc" name="dataNasc" placeholder="">
             </div>
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="cpfAluno">CPF do(a) estudante <strong class="obrigatorio">*</strong></label>
-                <input type="number" class="form-control" ng-model="matricula.cpfEstud" id="cpfEstud" name="cpfEstud" placeholder="" required>
+                <label class="form-control-label" for="cpfAluno">CPF do(a) estudante</label>
+                <input type="number" class="form-control" ng-model="cadastro.cpfEstud" id="cpfEstud" name="cpfEstud" placeholder="">
             </div>
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="sexo">Sexo <strong class="obrigatorio">*</strong></label>
+                <label class="form-control-label" for="sexo">Sexo</label>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" ng-model="matricula.sexo" type="radio" name="sexo" value="M" required><p class="checkText">Masculino</p> 
+                        <input class="form-check-input" ng-model="cadastro.sexo" type="radio" name="sexo" value="M"><p class="checkText">Masculino</p> 
                     </label>
                     <label class="form-check-label">
-                        <input class="form-check-input" ng-model="matricula.sexo" type="radio" name="sexo" value="F" required><p class="checkText">Feminino</p> 
+                        <input class="form-check-input" ng-model="cadastro.sexo" type="radio" name="sexo" value="F"><p class="checkText">Feminino</p> 
                     </label>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="rgEstud">Número do RG do(a) estudante <strong class="obrigatorio">*</strong></label>
-                <input type="number" class="form-control" ng-model="matricula.rgEstud" id="rgEstud" name="rgEstud" placeholder="" required>
+                <label class="form-control-label" for="rgEstud">Número do RG do(a) estudante</label>
+                <input type="number" class="form-control" ng-model="cadastro.rgEstud" id="rgEstud" name="rgEstud" placeholder="">
             </div>
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="orgExpAluno">Órgão de Expedição <strong class="obrigatorio">*</strong></label>
-                <input type="text" class="form-control" ng-model="matricula.orgExpEstud" id="orgExpEstud" name="orgExpEstud" placeholder="" required>
+                <label class="form-control-label" for="orgExpAluno">Órgão de Expedição</label>
+                <input type="text" class="form-control" ng-model="cadastro.orgExpEstud" id="orgExpEstud" name="orgExpEstud" placeholder="">
             </div>
             <div class="form-group col-md-4">
-                <label class="form-control-label" for="deficiencia">Possui Algum tipo de deficiência? <strong class="obrigatorio">*</strong></label>
+                <label class="form-control-label" for="deficiencia">Possui Algum tipo de deficiência?</label>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" ng-model="matricula.deficiencia" type="radio" id="deficienciaSim" name="deficiencia" value="sim" onchange="radioDeficiencia()"><p class="checkText" required>Sim</p>
+                        <input class="form-check-input" ng-model="cadastro.deficiencia" type="radio" id="deficienciaSim" name="deficiencia" value="sim" onchange="radioDeficiencia()"><p class="checkText">Sim</p>
                     </label>
                     <label class="form-check-label">
-                        <input class="form-check-input" ng-model="matricula.deficiencia" type="radio" id="deficienciaNao" name="deficiencia" value="nao" onchange="radioDeficiencia()"><p class="checkText" required>Não</p> 
+                        <input class="form-check-input" ng-model="cadastro.deficiencia" type="radio" id="deficienciaNao" name="deficiencia" value="nao" onchange="radioDeficiencia()"><p class="checkText">Não</p> 
                     </label>
                 </div>
             </div>
@@ -63,31 +63,31 @@
         <div id="collapseDeficiencia" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label class="form-control-label" for="TipoDeficiencia">Tipo da deficiência <strong class="obrigatorio">*</strong></label>
+                    <label class="form-control-label" for="TipoDeficiencia">Tipo da deficiência</label>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.tipoDef.defFisica" type="checkbox" name="TipoDeficiencia" value="Física"><p class="checkText">Física</p>
+                            <input class="form-check-input" ng-model="cadastro.tipoDef.defFisica" type="checkbox" name="TipoDeficiencia" value="Física"><p class="checkText">Física</p>
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.tipoDef.defAuditiva" type="checkbox" name="TipoDeficiencia" value="Auditiva"><p class="checkText">Auditiva</p> 
+                            <input class="form-check-input" ng-model="cadastro.tipoDef.defAuditiva" type="checkbox" name="TipoDeficiencia" value="Auditiva"><p class="checkText">Auditiva</p> 
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.tipoDef.defVisual" type="checkbox" name="TipoDeficiencia" value="Visual"><p class="checkText">Visual</p> 
+                            <input class="form-check-input" ng-model="cadastro.tipoDef.defVisual" type="checkbox" name="TipoDeficiencia" value="Visual"><p class="checkText">Visual</p> 
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.tipoDef.defMental" type="checkbox" name="TipoDeficiencia" value="Mental"><p class="checkText">Mental</p> 
+                            <input class="form-check-input" ng-model="cadastro.tipoDef.defMental" type="checkbox" name="TipoDeficiencia" value="Mental"><p class="checkText">Mental</p> 
                         </label>
                     </div>
                 </div>
                 <div class="form-group col-md-8">
-                    <label class="form-control-label" for="detalDeficiencia">Detalhes da Deficiência <strong class="obrigatorio">*</strong></label>
-                    <textarea type="textarea" class="form-control" ng-model="matricula.detalDef" id="detalDeficiencia" name="detalDeficiencia" placeholder="" style="height: 108px; resize: none;"></textarea>
+                    <label class="form-control-label" for="detalDeficiencia">Detalhes da Deficiência</label>
+                    <textarea type="textarea" class="form-control" ng-model="cadastro.detalDef" id="detalDeficiencia" name="detalDeficiencia" placeholder="" style="height: 108px; resize: none;"></textarea>
                 </div>
             </div>
         </div>
@@ -95,66 +95,101 @@
         <!-- Fim callapse deficiencia -->
 
         <div class="form-group">
-            <label class="form-control-label" for="nomeMae">Nome da Mãe <strong class="obrigatorio">*</strong></label>
-            <input type="text" class="form-control" ng-model="matricula.nomeMae" id="nomeMae" name="nomeMae" placeholder="" required>
+            <label class="form-control-label" for="nomeMae">Nome da Mãe</label>
+            <input type="text" class="form-control" ng-model="cadastro.nomeMae" id="nomeMae" name="nomeMae" placeholder="">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="nomePai">Nome do Pai</label>
-            <input type="text" class="form-control" ng-model="matricula.nomePai" id="nomePai" name="nomePai" placeholder="" required>
+            <input type="text" class="form-control" ng-model="cadastro.nomePai" id="nomePai" name="nomePai" placeholder="">
+        </div>
+        <div class="form-group">
+            <h3>Dados do Responsável</h3>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="nomeResp">Nome Completo do Responsável</label>
+            <input type="text" class="form-control" ng-model="cadastro.nomeResp" id="nomeResp" name="nomeResp" placeholder="">
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="rgResp">Número do RG do Responsável</label>
+                <input type="number" class="form-control" ng-model="cadastro.rgResp" id="rgResp" name="rgResp" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="orgExpResp">Órgão de Expedição</label>
+                <input type="text" class="form-control" ng-model="cadastro.orgExpResp" id="orgExpResp" name="orgExpResp" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+                <label class="form-control-label" for="cpfResp">CPF do Responsável</label>
+                <input type="number" class="form-control" ng-model="cadastro.cpfResp" id="cpfResp" name="cpfResp" placeholder="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="form-control-label" for="email">Email</label>
+                <input type="email" class="form-control" ng-model="cadastro.email" id="email" name="email" placeholder="">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="tele1">Telefone</label>
+                <input type="number" class="form-control" ng-model="cadastro.telefone" id="tele1" name="tele1" placeholder="">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="form-control-label" for="tele2">Celular</label>
+                <input type="number" class="form-control" ng-model="cadastro.celular" id="tele2" name="tele2" placeholder="">
+            </div>
         </div>
         <div class="form-group">
             <h3>Endereço</h3>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="cep" class="col-form-label">CEP <strong class="obrigatorio">*</strong></label>
-                <input type="text" class="form-control" ng-model="matricula.cep" id="cep" name="cep" required>
+                <label for="cep" class="col-form-label">CEP</label>
+                <input type="text" class="form-control" ng-model="cadastro.cep" id="cep" name="cep">
             </div>
             <div class="form-group col-md-4">
                 <label for="estado" class="col-form-label">Estado</label>
-                <input type="text" class="form-control" ng-model="matricula.estado" id="estado" name="endereco" placeholder="" readonly>
+                <input type="text" class="form-control" ng-model="cadastro.estado" id="estado" name="endereco" placeholder="" readonly>
             </div>
             <div class="form-group col-md-4">
                 <label for="cidade" class="col-form-label">Cidade</label>
-                <input type="text" class="form-control" ng-model="matricula.cidade" id="cidade" name="endereco" placeholder="" readonly>
+                <input type="text" class="form-control" ng-model="cadastro.cidade" id="cidade" name="endereco" placeholder="" readonly>
             </div>
         </div>
         <div class="form-group">
-            <label for="endereco" class="col-form-label">Endereço <strong class="obrigatorio">*</strong></label>
-            <input type="text" class="form-control" ng-model="matricula.endereco" id="endereco" name="endereco" placeholder="" required>
+            <label for="endereco" class="col-form-label">Endereço</label>
+            <input type="text" class="form-control" ng-model="cadastro.endereco" id="endereco" name="endereco" placeholder="">
         </div>
         <div class="form-group">
-            <label for="complemento" class="col-form-label">Complemento <strong class="obrigatorio">*</strong></label>
-            <input type="text" class="form-control" ng-model="matricula.complemento" id="complemento" name="complemento" placeholder="" required>
+            <label for="complemento" class="col-form-label">Complemento</label>
+            <input type="text" class="form-control" ng-model="cadastro.complemento" id="complemento" name="complemento" placeholder="">
         </div>
         <div class="form-group">
             <h3>Upload dos documentos necessários</h3>
         </div>
 
         <div class="form-group">
-            <h5>Etapa / Modalidade <strong class="obrigatorio">*</strong></h5>
+            <h5>Etapa / Modalidade</h5>
         </div>
         <fieldset class="form-group">
             <div class="row">
                 <div class="col-sm-10">
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input collapsed" ng-model="matricula.modalidade" type="radio" name="modalidade" id="eduInfant" value="Educação Infantil" onChange="radioCollapse()" required><p class="checkText">Educação Infantil</p> 
+                            <input class="form-check-input collapsed" ng-model="cadastro.modalidade" type="radio" name="modalidade" id="eduInfant" value="Educação Infantil" onChange="radioCollapse()" required><p class="checkText">Educação Infantil</p> 
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.modalidade" type="radio" name="modalidade" id="ensFundam" value="Ensino Fundamental" onChange="radioCollapse()" required><p class="checkText">Ensino Fundamental</p> 
+                            <input class="form-check-input" ng-model="cadastro.modalidade" type="radio" name="modalidade" id="ensFundam" value="Ensino Fundamental" onChange="radioCollapse()" required><p class="checkText">Ensino Fundamental</p> 
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.modalidade" type="radio" name="modalidade" id="ensMedio" value="Ensino Médio" onChange="radioCollapse()" required><p class="checkText">Ensino Médio</p> 
+                            <input class="form-check-input" ng-model="cadastro.modalidade" type="radio" name="modalidade" id="ensMedio" value="Ensino Médio" onChange="radioCollapse()" required><p class="checkText">Ensino Médio</p> 
                         </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" ng-model="matricula.modalidade" type="radio" name="modalidade" id="eduEspec" value="Educação Especial" onChange="radioCollapse()" required><p class="checkText">Educação Especial</p> 
+                            <input class="form-check-input" ng-model="cadastro.modalidade" type="radio" name="modalidade" id="eduEspec" value="Educação Especial" onChange="radioCollapse()" required><p class="checkText">Educação Especial</p> 
                         </label>
                     </div>
                 </div>
@@ -211,9 +246,9 @@
 
         <div class="form-group">
             <p><strong>Todos os documentos solicitados devem ser enviados nas extenções ('jpg', 'jpeg', 'png' ou 'pdf') e todos os documentos juntos não podem passar de 10MB.</strong></p>
-            <input id="campoFiles" class="file" ng-model="matricula.files" type="file" multiple data-preview-file-type="any" data-upload-url="/file-upload/1">
+            <input id="campoFiles" class="file" ng-model="cadastro.files" type="file" multiple data-preview-file-type="any" data-upload-url="/file-upload/1">
         </div>
-        {{matricula}}
+        {{cadastro}}
 
         <!--fim-->
 

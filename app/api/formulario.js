@@ -13,20 +13,22 @@ api.adiciona = function(req, res){
 };
 
 api.lista = function(req, res){
-    model.find(function(error, formularios){
+    model.find(function(error, formulario){
         if(error){
             res.status(500).json(error);
         }
-        res.json(formularios);
+        res.json(formulario);
     });
-    model
-        .find({})
-        .then(function(formularios){
-            res.json(formularios);    
-        },  function(error){
-            console.log(error);
+};
+
+
+api.listaCidadesUf = function(req, res){
+    model.find(function(error, cidadesUF){
+        if(error){
             res.status(500).json(error);
-        });
+        }
+        res.json(cidadesUF);
+    });
 };
 
 api.buscaPorId = function(req, res){
