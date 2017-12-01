@@ -1,25 +1,25 @@
 <div class="container configPagMap">
-   
-     <center>
-       <p class="TituloPagMap"><strong id="tituloPagina">Matrícula</strong></p>
+
+    <center>
+        <p class="TituloPagMap"><strong id="tituloPagina">Matrícula</strong></p>
     </center>
-  
+
     <form action="">
 
-   
+
         <div class="row configSelecPagMap">
             <div class="form-group col-md-4">
                 <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Cidade:</h3>
-                <select  ng-model="dados.NO_BAIRRO" ng-change="cidadeChange(dados.NO_BAIRRO)" ng-options="dados.NO_BAIRRO for dados in escolas | unique:'NO_BAIRRO'" class="custom-select col-sm-4" id="inlineFormCustomSelect">
+                <select ng-model="dados.NO_BAIRRO" ng-change="cidadeChange(dados.NO_BAIRRO)" ng-options="dados.NO_BAIRRO for dados in escolas | unique:'NO_BAIRRO'" class="custom-select col-sm-4" id="inlineFormCustomSelect">
                             <option value="">Selecionar</option>
                           </select>
             </div>
-              
 
-     
+
+
             <div class="form-group col-md-">
                 <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione Etapas do Ensino:</h3>
-            
+
                 <select ng-model="map.ensino" ng-change="ensinoChange(map.ensino)" class="custom-select col-md-3" id="inlineFormCustomSelect">
                             <option value="">Selecionar</option>
                             <option value="infantil">Ensino Infantil</option>
@@ -31,7 +31,7 @@
                           </select>
             </div>
 
-      
+
             <div class="form-group col-md-4">
                 <h3 class="mr-sm-3" for="inlineFormCustomSelect">Selecione a Escola:</h3>
                 <select ng-model="map.escola" ng-change="escolaChange(map.escola)" ng-options="escola.NO_ENTIDADE for escola in escolasFilter" class="custom-select col-md-3" id="inlineFormCustomSelect">
@@ -40,7 +40,7 @@
             </div>
 
         </div>
-        
+
     </form>
 
 
@@ -48,14 +48,14 @@
     <div class="row">
 
 
-      <div style="height: 400px;" class=" col-md-7">
+        <div style="height: 400px;" class=" col-md-7">
             <div id="map">
 
             </div>
 
-           
 
-        
+
+
 
 
         </div>
@@ -78,44 +78,121 @@
             </div>
 
             <div class="col-6 ">
-                <a href="" ng-click="enviaIdForm()"  class="btn btn-success">Matricular</a>
+                <a href="" ng-click="enviaIdForm()" class="btn btn-success">Matricular</a>
             </div>
 
         </div>
 
     </div>
 
- <div class="form-gruop configuraAvaPagMap">
-   
-    <ul class="nav nav-pills myTab" role="tablist">
-        <li class="nav-item">
-           
-            <a class="btn btn-outline-success" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Avaliações</a>
-        </li>
-        <li class="nav-item">
-            <a class="btn btn-outline-success" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-        </li>
+    <div class="form-gruop configuraAvaPagMap">
+        <br>   
+        <br>   
+        <br>   
+        <div class="container">
+                <div class="row justify-content-center">
+                
+                <div class="col-4">
 
-    </ul>
-    <div class="tab-content comentarioMap" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample2">Comentários de usuários</button>
 
+                </div>
+                <div class="col-4">
 
-            <div class="card border-dark mb-3 ">
-                <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span></div>
-                <div class="card-body text-dark">
+                 <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Faça seu comentário</button>
 
-                    <p class="card-text">Gosto muito dessa escola.</p>
                 </div>
             </div>
-         
+
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">STREET+n DA A BUNDA NA STREET</div>
+        
+        <br>   
+      
+      
+        <div class="row">
+           
+           
+           
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+
+                        <div class="tab-content  comentarioMap" id="myTabContent">
+                            <div class="tab-pane fade show active" id="coment" role="tabpanel" aria-labelledby="home-tab">
+
+
+                                <div class="card border-dark ">
+                                    <div class="card-header">Lucas Fernandes&nbsp;&nbsp;<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span></div>
+                                    <div class="card-body text-dark">
+
+                                        <p class="card-text">Gosto muito dessa escola.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        
+                        
+                            <div class="tab-content  comentarioMap" id="myTabContent">
+                <div class="tab-pane fade show active" id="comentForm" role="tabpanel" aria-labelledby="home-tab">
+
+
+                    <div class="card border-dark ">
+                        <div class="card-header">
+
+                            <center>
+                                <p>Conhece essa escola?</p>
+                            </center>
+
+                        </div>
+                        <div class="card-body text-dark">
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Login">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Senha">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1"> Deixe seu comentário.</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                
+                                <button class="btn btn-success">Enviar</button>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+            </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+ 
+
 
     </div>
-</div>
 </div>
